@@ -1,7 +1,7 @@
 {
   "name": "prisma-ai-renamer",
   "module": "NodeNext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cli tool to use AI to rename complex prisma schemas according to naming conventions without changing the underlying database structure",
   "main": "dist/index.js",
   "bin": {
