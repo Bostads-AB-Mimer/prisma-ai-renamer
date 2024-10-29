@@ -1,0 +1,14 @@
+node_modules
+.env
+.aider*
+../node_modules
+# Keep environment variables out of version control
+xpand-prisma-client/.env
+
+xpand-prisma-client/prisma/
+# todo: include output later when generating models have been tested / improved
+xpand-prisma-client/output/
+/xpand-prisma-client/node_modules/
+
+.idea/
+dist/

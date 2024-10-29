@@ -1,0 +1,33 @@
+{
+  "name": "prisma-ai-renamer",
+  "module": "NodeNext",
+  "version": "1.0.0",
+  "description": "A cli tool to use AI to rename complex prisma schemas according to naming conventions without changing the underlying database structure",
+  "main": "dist/index.js",
+  "bin": {
+    "prisma-ai-renamer": "./dist/index.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "npm run cli convert",
+    "cli": "node --import tsx ./index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bostads AB Mimer",
+  "license": "MIT",
+  "dependencies": {
+    "@loancrate/prisma-schema-parser": "^2.0.0",
+    "commander": "^12.1.0",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "express": "4.18.2",
+    "fast-graph": "^1.5.0",
+    "openai": "^4.59.0",
+    "rxjs": "^7.8.1",
+    "tsx": "^4.19.1"
+  }
+}
