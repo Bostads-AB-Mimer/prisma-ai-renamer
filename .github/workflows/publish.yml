@@ -15,10 +15,13 @@ jobs:
 
       # Setup Node.js environment
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        # Setup .npmrc file to publish to npm
+        uses: actions/setup-node@v4
         with:
-          registry-url: https://registry.npmjs.org/
-          node-version: '14'
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
      # Install dependencies (required by Run tests step)
       - name: Install dependencies
@@ -64,8 +67,6 @@ jobs:
       # Publish version to public repository
       - name: Publish
         run: npm publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # Push repository changes
       - name: Push changes to repository
