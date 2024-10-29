@@ -10,6 +10,7 @@ if (!process.env.OPENAI_API_KEY) {
   process.exit(1)
 }
 import { Command } from 'commander'
+import { version } from './package.json'
 import { convert } from './lib/convert'
 import { saveModelToDisk } from './lib/saveModelToDisk'
 import { mergeModels } from './lib/merge'
@@ -19,7 +20,7 @@ const program = new Command()
 program
   .name('prisma-ai-renamer')
   .description('CLI to manage Prisma AI renaming tasks')
-  .version('1.0.0')
+  .version(version)
   .description(
     `Convert models with a starting point and schema file. It uses depth-first search to find all dependencies and convert them in correct order. 
 
