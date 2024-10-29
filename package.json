@@ -32,6 +32,7 @@
     "tsx": "^4.19.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.12",
     "typescript": "^5.6.3"
   }
 }
