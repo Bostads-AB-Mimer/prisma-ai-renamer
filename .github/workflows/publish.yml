@@ -22,7 +22,7 @@ jobs:
 
      # Install dependencies (required by Run tests step)
       - name: Install dependencies
-       run: npm install
+        run: npm install
 
       # Tests
       #- name: Run tests
